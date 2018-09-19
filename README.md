@@ -1,7 +1,10 @@
 # Exexnium trade public API
 
+**Note, that this is beta-mode of public api and we will develop some change in next few months.**
+
 Base API URL: 
 https://api.exenium.io
+
 
 ## SYMBOL list
 
@@ -113,6 +116,7 @@ GET /trade/pair/order/list?pair=BTC,USD&page=0
 
  parameter | type | description
 --- |--- | ---
+ pair | string | [required] currencies of symbol, divided by ","
  page | number | [required] page of list. From -10 (for BUY orders) to 10 (for SELL orders). If zero - return 10 best SELL and 10 best BUY orders.
  
  
