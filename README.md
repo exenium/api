@@ -79,7 +79,7 @@ GET /trade/pair/info?currencies=BTC,USD
  currencies | number | [required] SYMBOL currencies
  
  
- ## SYMBOL orders
+ ## SYMBOL active orders
 
 Returns orders of SYMBOL
 
@@ -117,6 +117,41 @@ GET /trade/pair/order/list?pair=BTC,USD&page=0
  parameter | type | description
 --- |--- | ---
  pair | string | [required] currencies of symbol, divided by ","
- page | number | [required] page of list. From -10 (for BUY orders) to 10 (for SELL orders). If zero - return 10 best SELL and 10 best BUY orders.
+ page | number | [required] page of list. From -10 (for BUY orders) to 10 (for SELL orders). If zero - return 10 the best SELL and 10 the best BUY orders.
+ 
+ 
+  ## SYMBOL history orders
+
+Returns hostory trades of SYMBOL
+
+```
+GET /trade/pair/order/history?pair=BTC,USD&from_id=896&limit=2
+```
+
+```json
+[{
+  "id":897,
+  "timestamp":1542112895,
+  "price":0.5000000000000000,
+  "amount":2.070000000000000000,
+  "type":"sell"
+},{
+  "id":896,
+  "timestamp":1542112894,
+  "price":0.6000000000000000,
+  "amount":0.100000000000000000,
+  "type":"sell"
+}]
+```
+
+#### GET parametes
+
+ parameter | type | description
+--- |--- | ---
+ pair | string | [required] currencies of symbol, divided by ","
+ from_id | number | [optional] filter by minimal order history id. If exists - returns will be ordered by ascending id, if not exists - by descending id
+ limit | number | [optional] number of orders to return. minimum 1, maximum 1000, default 100
+ 
+ 
  
  
