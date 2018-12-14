@@ -125,7 +125,7 @@ GET /trade/order/list?pair=BTC,USD&page=0
 Returns hostory trades of SYMBOL
 
 ```
-GET /trade/pair/history?pair=BTC,USD&from_id=896&limit=2
+GET /trade/history?pair=BTC,USD&from_id=896&limit=2
 ```
 
 ```json
