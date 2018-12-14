@@ -84,7 +84,7 @@ GET /trade/pair/info?currencies=BTC,USD
 Returns orders of SYMBOL
 
 ```
-GET /trade/pair/order/list?pair=BTC,USD&page=0
+GET /trade/order/list?pair=BTC,USD&page=0
 ```
 
 ```json
@@ -125,7 +125,7 @@ GET /trade/pair/order/list?pair=BTC,USD&page=0
 Returns hostory trades of SYMBOL
 
 ```
-GET /trade/pair/order/history?pair=BTC,USD&from_id=896&limit=2
+GET /trade/pair/history?pair=BTC,USD&from_id=896&limit=2
 ```
 
 ```json
