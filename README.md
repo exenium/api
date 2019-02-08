@@ -46,6 +46,34 @@ GET /trade/pair/list?page=1&size=5
  start | number | Number of first element in returned array `items`
  total | number | Total resulted elements available for current method
  
+ ## Extended SYMBOL list
+
+Returns available trade SYMBOLS with information from "SYMBOL info" method
+
+```
+GET /trade/pair/listfull
+```
+
+```
+{
+  "items": [{
+    "volume24h": 0.000003968,
+    "price": 0.03968,
+    "change1h": 1,
+    "change24h": 1,
+    "change1w": 1,
+    "high24h": 0.03968,
+    "low24h": 0.03968,
+    "currency_codes": ["ETH", "BTC"],
+    "ask_price": 0.03968,
+    "ask_amount": 0.65276,
+    "bid_price": 0.03968,
+    "bid_amount": 0.01934
+  }]
+}
+```
+
+
 
 ## SYMBOL info
 
@@ -77,6 +105,7 @@ GET /trade/pair/info?currencies=BTC,USD
  parameter | type | description
 --- |--- | ---
  currencies | number | [required] SYMBOL currencies
+ 
  
  
  ## SYMBOL active orders
