@@ -5,6 +5,37 @@
 Base API URL: 
 https://api.exenium.io
 
+## Currency list
+
+Returns available currencies
+
+```
+GET /currency/list?page=1&size=5
+```
+
+```json
+{
+  "items": [{
+    "id": 1,
+    "code": "RUB",
+    "title": "Russian ruble",
+    "description": "",
+    "can_deposit": false,
+    "can_withdraw": true,
+    "can_transfer": false
+  },{
+    "id": 2,
+    "code": "USD",
+    "title": "United States Dollar",
+    "description": "",
+    "can_deposit": false,
+    "can_withdraw": false,
+    "can_transfer": true
+  }],
+  "start": 0,
+  "total": 11
+}
+```
 
 ## SYMBOL list
 
