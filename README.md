@@ -22,7 +22,8 @@ GET /currency/list?page=1&size=5
     "description": "",
     "can_deposit": false,
     "can_withdraw": true,
-    "can_transfer": false
+    "can_transfer": false,
+    "balance_round_digits": 2
   },{
     "id": 2,
     "code": "USD",
@@ -30,7 +31,8 @@ GET /currency/list?page=1&size=5
     "description": "",
     "can_deposit": false,
     "can_withdraw": false,
-    "can_transfer": true
+    "can_transfer": true,
+    "balance_round_digits": 2
   }],
   "start": 0,
   "total": 11
